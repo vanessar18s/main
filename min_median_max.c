@@ -1,4 +1,6 @@
 /*
+  Vanessa Ramirez
+  CS-171
   min_median_max.c
 
   Goal: given three numbers, IN ANY ORDER, figure out which one is
@@ -15,7 +17,7 @@
   all 6.
 
   Compile with:
-      cc day6_04_min_median_max.c
+      cc min_median_max.c
   Run with:
       ./a.out
 
@@ -41,7 +43,7 @@ int main()
   
     // TODO 2: prompt for and read a, b, and c
 
-    printf("Enter a, b, and c:" );
+    printf("Enter in 3 values: ");
     scanf("%lf %lf %lf", &a, &b, &c);
     
     // TODO 3: figure out the ordering with nested ifs. Start by
@@ -52,10 +54,37 @@ int main()
     //         tree of nested if/else statements that covers all 6,
     //         assigning min, median, and max at each final branch.
 
-
+    if (a <= b && b <= c) {
+      min = a
+      median= b;
+      max = c;
+    } else if (a <= c && c < b) {
+      min = a;
+      median = c;
+      mac = b;
+    } else if (c < a && a <= b) {
+      min = c;
+      median = a;
+      max = b;
+    } else if (b < c && c <= a ) {
+      min = b;
+      median = a;
+      max = c;
+    } else if  (b <= c && c < a) {
+      min = b;
+      median = c;
+      max = a;
+     } else if (c < b && b < a) {
+      min = c;
+      median = b;
+      max = a;
+    }
+ 
     // TODO 4: print min, median, and max
 
-    printf("");
+      printf("min: %.0lf", min);
+      printf("median: %.0lf", median);
+      printf("max: %.0lf", max);
 
     return 0;
 }
