@@ -18,12 +18,15 @@
 */
 
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
-  double n = o;
+  double n = 0;
   double pos = 0;
   double neg = 0;
+  double even = 0;
+  double odd = 0;
 
   printf("Enter a value for n:");
   scanf("%lf", &n);
@@ -38,8 +41,16 @@ int main()
       // Count the number of negative
       neg = neg + 1;
     }
+    if (fmod(n, 2) == 0) {
+        // Count the number of even numbers
+        even = even + 1;
+    }
+    else {
+        // Count the number of odd numbers
+        odd = odd + 1;
+    }
     printf("Enter a value for n: ");
-    scanf("%lf", n);
+    scanf("%lf", &n);
   }
 
   // printf("Left while-loop\n")
