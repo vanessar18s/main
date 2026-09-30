@@ -46,7 +46,38 @@ int main()
     i = i + 1;
   } 
 
-  printf("%lf is the alternative sum:\n", sum);
+  printf("The non-alteranting sum of squares is: %lf\n", sum);
 
+  // Reset values
+  i = 1;
+  sum = 0;
+
+  while (i <= n) {
+    sum = sum + sign * i * i;
+    i = i + 1;
+    sign = -sign;
+  }
+
+  printf("The alternating sum of squares is: %lf\n", sum);
+  
   return 0;
 }
+/*
+  sum_to_n.c
+
+  dounle i = 1;
+  double n = 0;
+  double sum = 0;
+  double sum_using_formula = 0;
+  
+  while (i <= n) {
+    sum = sum + i * i;
+    i = i + 1;
+  }
+
+  printf("The sum from 1 to %.0lf\n", n, sum);
+  
+  sum_using_formula = (n * (n + 1)) / 2;
+  printf("The sum from 1 to %.0lf using the formula is: %.olf", n, sum_using_formula);
+
+*/
