@@ -17,13 +17,17 @@ int main()
   double count = 0;
   double sum = 0;
 
-  printf(" ");
-  scanf(" ");
+  printf("Enter a non-negative number (negative numbers will make the code stop): ");
+  scanf("%lf", &number);
 
-  while (number >= 0); {
-    printf("You've entered: &lf");
+  while (number >= 0) {
     count = count + 1;
     sum = sum + number;
-    
+    printf("Enter another non-negative number: ");
+    scanf("%lf", &number);
+  }
+
+  printf("You've enetered %.0lf non-negative numbers\n", count);
+   
   return 0;
 }
