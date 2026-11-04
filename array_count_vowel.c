@@ -1,0 +1,52 @@
+/*
+  Vanessa Ramirez
+  count_vowels.c
+
+  Goal: read a lowercase word and count how many of its letters are vowels
+  (a, e, i, o, u). This is the same vowel test Lab 15 needs, turned around.
+
+  TODO:
+    1. Declare a char array w of 100 and ints i and count.
+    2. Read the word with scanf("%s", w).
+    3. Set count to 0 and i to 0. While w[i] is not '\0': if w[i] is
+       'a' or 'e' or 'i' or 'o' or 'u', add 1 to count. Then add 1 to
+       i.
+    4. Print the count in the format shown below.
+
+  Compile with:
+      cc count_vowels.c
+  Run with:
+      ./a.out
+
+  Test cases:
+      savages  ->  Vowels: 3
+      rhythm   ->  Vowels: 0
+      queue    ->  Vowels: 4
+*/
+
+#include <stdio.h>
+
+int main()
+{
+  char w[100];
+
+  int i;
+  int count;
+
+  printf("Enter a word: ");
+  scanf("%s", w);
+
+  i = 0;
+  count = 0;
+
+  while (w[i] != '\0') {
+    if (w[i] == 'a' || w[i] == 'e' || w[i] == i || w[i] == 'o' || w[i] == 'u') {
+      count = count + 1;
+    }
+    i = i + 1;
+  }
+
+  printf("Vowels: %d\n", count);
+  
+  return 0;
+}
