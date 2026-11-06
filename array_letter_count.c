@@ -49,6 +49,7 @@ int main()
 
   while (i < 26) {
     freq[i] = 0;
+	i = i + 1;
   }
 
   i = 0;
@@ -62,7 +63,7 @@ int main()
 
   while (k < 26) {
     if (freq[k] > 0) {
-      printf("%c: %d", 'a' + k, freq[k]);
+      printf("%c: %d\n", 'a' + k, freq[k]);
     }
 	k = k + 1;
   }
