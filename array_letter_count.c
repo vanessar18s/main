@@ -1,0 +1,71 @@
+/*
+  Vanessa Ramirez
+  letter_counts.c
+
+  Goal: read a lowercase word and print how many times each letter of the
+  alphabet appears in it, using a frequency table with one box per letter:
+  box 0 for 'a', box 1 for 'b', ... box 25 for 'z'. The index is w[i] - 'a'.
+  (Same pattern as Lab 13's counts[] array.)
+
+  TODO:
+    1. Declare a char array w of 100, an int array f of 26, and ints i
+       and k.
+    2. Read the word with scanf("%s", w).
+    3. Set every box of f to 0 with a loop (i from 0 while i is less
+       than 26).
+    4. Set i to 0. While w[i] is not '\0': add 1 to f[w[i] - 'a'],
+       then add 1 to i.
+    5. Set k to 0. While k is less than 26: if f[k] is greater than 0,
+       print the letter 'a' + k with %c, then a colon and space, then
+       f[k] with %d, then a newline. Add 1 to k.
+    6. (Letters that never appear are not printed.)
+
+  Compile with:
+      cc letter_counts.c
+  Run with:
+      ./a.out
+
+  Test cases:
+      banana  ->  a: 3
+                  b: 1
+                  n: 2
+      hello   ->  e: 1
+                  h: 1
+                  l: 2
+                  o: 1
+*/
+
+#include <stdio.h>
+
+int main()
+{
+  char word[100];
+  int freq[26];
+  int i;
+  int k;
+
+  printf("Enter a word: ");
+  scanf("%s", word);
+
+  while (i < 26) {
+    freq[i] = 0;
+  }
+
+  i = 0;
+
+  while (word[i] != '\0') {
+    ++freq[word[i] - 'a'];
+    i = i + 1;
+  }
+
+  k = 0;
+
+  while (k < 26) {
+    if (freq[k] > 0) {
+      printf("%c: %d", 'a' + k, freq[k]);
+    }
+	k = k + 1;
+  }
+  
+  return 0;
+}
