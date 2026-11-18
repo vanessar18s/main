@@ -34,7 +34,7 @@
 
 # include <stdio.h>
 
-double larger(double first, doubele second) {
+double larger(double first, double second) {
   double result;
 
   if (first > second) {
