@@ -50,4 +50,5 @@ int main()
      z = 18
 
   b. No, because we just declared it, we didnt use an & that allows to change the variable
+   a copy is being passed in the function and unless we assign it, it will chnage the value.
 */
