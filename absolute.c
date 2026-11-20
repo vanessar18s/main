@@ -50,6 +50,7 @@ int main()
   scanf("%lf", &number);
 
   // or you can put result instead of absolute(number)
+  // result = absolute(number));
   printf("%lf\n", absolute(number));
 
   return 0;
